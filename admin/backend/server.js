@@ -76,25 +76,8 @@ const server = app.listen(PORT, () => {
 	console.log('Server is ready for requests');
 });
 
-// Prevent exit
-process.stdin.resume();
 
-// Graceful shutdown
-process.on('SIGINT', () => {
-  console.log('\n✓ Shutting down gracefully...');
-  server.close(() => {
-    console.log('✓ Server closed');
-    process.exit(0);
-  });
-});
 
-// Handle uncaught exceptions
-process.on('uncaughtException', (err) => {
-  console.error('✗ Uncaught Exception:', err);
-});
 
-// Handle unhandled promise rejections
-process.on('unhandledRejection', (reason, promise) => {
-  console.error('✗ Unhandled Rejection at:', promise, 'reason:', reason);
-});
+
 
