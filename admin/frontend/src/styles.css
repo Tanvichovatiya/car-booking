@@ -1,0 +1,18 @@
+:root{ --bg:#f5f7fb; --card:#fff; --accent:#2d6cdf; --danger:#d9534f }
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif}
+body{margin:0;background:var(--bg);color:#111}
+.container{display:grid;place-items:center;height:100vh}
+.card{background:var(--card);padding:16px;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.row{display:flex;justify-content:space-between;align-items:center;margin:12px 0}
+.primary{background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:6px}
+.danger{background:var(--danger);color:#fff;border:none;padding:8px 12px;border-radius:6px}
+label{display:block;margin-top:8px;font-size:13px}
+input,select{width:100%;padding:8px;margin-top:6px;border:1px solid #ddd;border-radius:6px}
+.dashboard{display:flex;min-height:100vh}
+.sidebar{width:220px;background:#fff;padding:16px;border-right:1px solid #eee}
+.sidebar h3{margin:0 0 12px}
+.sidebar nav a{display:block;margin:6px 0;color:#333;text-decoration:none}
+.main{flex:1;padding:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.list .card{margin-bottom:10px}
+.error{background:#ffecec;padding:8px;border-radius:6px;color:#900;margin-bottom:8px}
